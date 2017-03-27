@@ -95,6 +95,12 @@ open class PullToRefresh: NSObject {
         refreshView.frame.size.height = height
         self.init(refreshView: refreshView, animator: DefaultViewAnimator(refreshView: refreshView), height: height, position: position)
     }
+
+    @objc public convenience override init() {
+        let height: CGFloat = 40
+        let position: Position = .top
+        self.init(height: height, position: position)
+    }
     
     deinit {
         scrollView?.removePullToRefresh(at: position)
