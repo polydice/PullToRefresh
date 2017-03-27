@@ -101,4 +101,12 @@ public extension UIScrollView {
         endRefreshing(at: .top)
         endRefreshing(at: .bottom)
     }
+
+    @objc func endRefreshingAtTop() {
+        topPullToRefresh?.endRefreshing()
+    }
+
+    @objc func startRefreshingAtTop() {
+        topPullToRefresh?.startRefreshing()
+    }
 }
