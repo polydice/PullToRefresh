@@ -33,7 +33,7 @@ public extension UIScrollView {
         }
     }
     
-    func addPullToRefresh(_ pullToRefresh: PullToRefresh, action: @escaping () -> ()) {
+    @objc func addPullToRefresh(_ pullToRefresh: PullToRefresh, action: @escaping () -> ()) {
         pullToRefresh.scrollView = self
         pullToRefresh.action = action
         
@@ -81,7 +81,7 @@ public extension UIScrollView {
         }
     }
     
-    func removeAllPullToRefresh() {
+    @objc func removeAllPullToRefresh() {
         removePullToRefresh(at: .top)
         removePullToRefresh(at: .bottom)
     }
@@ -106,7 +106,7 @@ public extension UIScrollView {
         }
     }
     
-    func endAllRefreshing() {
+    @objc func endAllRefreshing() {
         endRefreshing(at: .top)
         endRefreshing(at: .bottom)
     }
